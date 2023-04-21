@@ -1,0 +1,21 @@
+# Idea
+
+.idea
+
+# Node
+
+node_modules
+dist
+coverage
+
+# Env
+
+.env
+
+# Eslint
+
+.eslintcache
+
+# Asdf
+
+.tool-versions
