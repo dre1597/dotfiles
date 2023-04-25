@@ -1,0 +1,3 @@
+ng add @angular-eslint/schematics
+
+yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
