@@ -1,5 +1,3 @@
-// yarn add eslint eslint-config-prettier eslint-plugin-prettier prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser -D
-
 module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
