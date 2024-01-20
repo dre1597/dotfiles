@@ -1,10 +1,25 @@
+## typescript
+
+> Install typescript and node types
+
+```bash
+npm install typescript @types/node -D
+```
+
+## commitlint
+
+> Install commitlint
+
+```bash
+npm install commitlint commitlint-config-gitmoji -D
+```
+
 ## eslint and prettier
 
 > Install eslint and prettier packages
 
 ```bash
-yarn add eslint eslint-config-prettier eslint-plugin-prettier prettier @typescript-eslint/eslint-plugin
-@typescript-eslint/parser -D
+npm install eslint eslint-plugin-import-helpers eslint-config-prettier eslint-plugin-prettier prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser -D
 ```
 
 > copy `eslintrc.js` and `.prettierrc`  files
@@ -14,7 +29,7 @@ yarn add eslint eslint-config-prettier eslint-plugin-prettier prettier @typescri
 > Install lint-staged and husky packages
 
 ```bash
-yarn add lint-staged husky -D
+npm install lint-staged husky -D
 ```
 
 > Edit `package.json` adding the prepare script
@@ -35,4 +50,35 @@ npx husky add .husky/pre-commit "npx lint-staged"
 
 ```bash
 chmod +x .husky/pre-commit
+```
+
+## swagger and morgan with express
+
+> Install swagger, morgan and express
+
+```bash
+npm install express morgan tsoa swagger-ui-express
+npm install @types/express @types/morgan @types/swagger-ui-express -D  
+```
+
+> Init swagger and morgan
+
+```ts
+import express from 'express';
+import morgan from 'morgan';
+import swaggerUI from 'swagger-ui-express';
+
+const app = express();
+app.use(morgan('tiny'));
+app.use(express.static('public'));
+
+app.use(
+  '/docs',
+  swaggerUI.serve,
+  swaggerUI.setup(undefined, {
+    swaggerOptions: {
+      url: '/swagger.json',
+    },
+  }),
+);
 ```
